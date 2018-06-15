@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_isbracket.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/15 06:55:56 by srheede           #+#    #+#             */
-/*   Updated: 2018/06/15 06:56:02 by srheede          ###   ########.fr       */
+/*   Created: 2018/06/15 07:16:43 by srheede           #+#    #+#             */
+/*   Updated: 2018/06/15 07:17:21 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "../libft.h"
 
-void	ft_swap(int *a, int *b)
+int		ft_isbracket(int c)
 {
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	if (ft_isbracket_open(c) || ft_isbracket_closed(c))
+		return (1);
+	return (0);
 }

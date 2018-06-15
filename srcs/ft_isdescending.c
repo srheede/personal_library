@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_isdescending.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/15 06:55:56 by srheede           #+#    #+#             */
-/*   Updated: 2018/06/15 06:56:02 by srheede          ###   ########.fr       */
+/*   Created: 2018/06/15 07:20:17 by srheede           #+#    #+#             */
+/*   Updated: 2018/06/15 07:21:37 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "../libft.c"
 
-void	ft_swap(int *a, int *b)
+int		ft_isdescending(int a, int b)
 {
-	int tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	return (a >= b);
 }

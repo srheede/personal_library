@@ -6,7 +6,7 @@
 /*   By: srheede <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 06:08:35 by srheede           #+#    #+#             */
-/*   Updated: 2018/05/31 22:12:30 by srheede          ###   ########.fr       */
+/*   Updated: 2018/06/15 06:55:12 by srheede          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 typedef struct		s_list
 {
+    int				data;
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
@@ -31,7 +32,12 @@ int                 ft_factorial(int i);
 int                 ft_fibonacci(int i);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
+int                 ft_isascending(int a, int b);
 int					ft_isascii(int c);
+int                 ft_isbracket(int c);
+int                 ft_isbracket_closed(int c);
+int                 ft_isbracket_open(int c);
+int                 ft_isdescending(int a, int b);
 int					ft_isdigit(int c);
 int					ft_islower(int c);
 int                 ft_isprime(int nb)
@@ -57,7 +63,7 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 int                 ft_next_prime(int nb);
-int                 ft_op(int i, char c, int j)
+int                 ft_op(int i, char c, int j);
 int                 ft_powerof(int nb, int power);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(char c);
@@ -98,10 +104,11 @@ char                **ft_strsplit_lines(char const *s);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
+void				ft_swap(int *a, int *b);
 int                 ft_sqrt(int nb);
-void                ft_swap(void);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int                 get_next_line(const int fd, char **line);
+t_list              *sort_list(t_list *lst, int (*cmp)(int, int));
 
 #endif
